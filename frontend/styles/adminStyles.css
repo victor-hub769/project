@@ -1,0 +1,32 @@
+.content{
+    margin-left: 260px;
+
+}
+.thumbNail{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+.btnAdmin{
+    background-color: black!important;
+    color: white;
+    border: none!important;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+.admin-btn-full{
+    width: 100%;
+}
+.categoryListItem{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding:5px 10px;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    display: inline-block;
+}
+.categoryButton{
+    width: 100%;
+}

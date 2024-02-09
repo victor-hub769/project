@@ -4,10 +4,38 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import victorLogo from "../assets/victor.png";
+import publicApi from "../api/publicApi";
+
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+
+    const [logo, setLogo] = useState([]);
+    const [show, setShow] = useState(false);
+    const [showEdit, setShowEdit] = useState(false);
+  
+    const getLogo = async () => {
+      const { data } = await publicApi.get("/logo/get");
+      setLogo(data.data[0].logo);
+      console.log(data);
+    };
+  
+    // const createAbout = async (e) => {
+    //   e.preventDefault();
+    //   const { data } = await publicApi.post("/about/create");
+    //   console.log(data);
+    //   if (data.message === "About created succesfully") {
+    //     setAbout([...about, data.data]);
+    //     setShow(false);
+    //   }
+    // };
+  
+    useEffect(() => {
+      getLogo();
+    }, []);
+
   return (
     <nav
       className={
@@ -23,10 +51,10 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={victorLogo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer">
-            Victor Muriihi{" "}
-            <span className="sm:block hidden">Java Script Mastery</span>
+          <img src={`http://localhost:5100/${logo}`} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Victor Muriihi &nbsp;{" "}
+            <span className="sm:block hidden"> | JSMastery</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -62,7 +90,10 @@ const Navbar = () => {
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => setActive(link.title)}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(link.title);
+                  }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>

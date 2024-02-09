@@ -22,7 +22,7 @@ import {
     carrent,
     jobit,
     tripguide,
-    threejs,
+    threejs
   } from "../assets";
   
   export const navLinks = [
@@ -46,7 +46,7 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "MERN Developer",
       icon: mobile,
     },
     {
@@ -97,7 +97,7 @@ import {
       icon: mongodb,
     },
     {
-      name: "Three JS",
+      name: "threejs",
       icon: threejs,
     },
     {
@@ -116,7 +116,7 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
+      title: "React Developer",
       company_name: "Starbucks",
       icon: starbucks,
       iconBg: "#383E56",
@@ -129,7 +129,7 @@ import {
       ],
     },
     {
-      title: "React Native Developer",
+      title: "Mern Developer",
       company_name: "Tesla",
       icon: tesla,
       iconBg: "#E6DEDD",
@@ -172,7 +172,7 @@ import {
   const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+        "I thought it was impossible to make a website as beautiful as our product, but Victor proved me wrong.",
       name: "Sara Lee",
       designation: "CFO",
       company: "Acme Co",
@@ -180,7 +180,7 @@ import {
     },
     {
       testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
+        "I've never met a web developer who truly cares about their clients' success like Victor does.",
       name: "Chris Brown",
       designation: "COO",
       company: "DEF Corp",
@@ -188,7 +188,7 @@ import {
     },
     {
       testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+        "After Victor optimized our website, our traffic increased by 50%. We can't thank them enough!",
       name: "Lisa Wang",
       designation: "CTO",
       company: "456 Enterprises",
